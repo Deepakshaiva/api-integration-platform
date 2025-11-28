@@ -1,7 +1,7 @@
 const authMiddleware = require('../middleware/authMiddleware');
 const express = require('express');
 const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
+const generateToken = require('../utils/generateToken');
 const User = require('../models/User');
 
 const router = express.Router();
@@ -26,10 +26,12 @@ router.post('/signup', async (req, res) => {
       email,
       password: hashedPassword,
     });
+    const token = generateToken(newUser);
 
     return res.status(201).json({
       message: 'User registered successfully',
       userId: newUser._id,
+      token,
     });
   } catch (err) {
     console.error('Signup error:', err.message);
@@ -55,11 +57,7 @@ router.post('/login', async (req, res) => {
     }
 
     // create token
-    const token = jwt.sign(
-      { id: user._id, role: user.role },
-      process.env.JWT_SECRET,
-      { expiresIn: '1d' }
-    );
+    const token = generateToken(user);
 
     return res.json({
       message: 'Login successful',
