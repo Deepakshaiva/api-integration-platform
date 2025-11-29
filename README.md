@@ -2,18 +2,18 @@
 
 A backend-heavy full-stack project where authenticated users can create, trigger, and monitor API integrations — similar in spirit to tools like Zapier or n8n.
 
-Built with **Node.js, Express, MongoDB, JWT auth, and React (Vite)**.
+Built with Node.js, Express, MongoDB, JWT auth, and React (Vite).
 
 ---
 
-## ✨ Features
+✨ Features
 
-- 🔐 **JWT Authentication**
+- 🔐 **JWT Authentication
   - User signup & login
   - Protected routes with auth middleware
   - Current user endpoint (`/api/auth/me`)
 
-- 🔗 **Integration Management**
+ 🔗 Integration Management
   - Create integrations with:
     - Name, service (e.g. Slack, Teams, custom)
     - Target endpoint URL
@@ -21,13 +21,13 @@ Built with **Node.js, Express, MongoDB, JWT auth, and React (Vite)**.
     - JSON payload
   - Store integrations per user in MongoDB
 
-- 🚀 **Trigger Engine**
+- 🚀 Trigger Engine
   - Backend calls third-party APIs using Axios
   - Logs status: `pending | success | failed`
   - Saves `lastTriggeredAt` and `lastResponse` (status code + body)
   - Retry failed integrations from the dashboard
 
-- 🖥️ **React Dashboard**
+- 🖥️ React Dashboard
   - Login via JWT
   - Create new integrations from UI
   - List all integrations for logged-in user
@@ -38,7 +38,7 @@ Built with **Node.js, Express, MongoDB, JWT auth, and React (Vite)**.
 
 ## 🧱 Tech Stack
 
-**Backend**
+Backend
 - Node.js, Express
 - MongoDB + Mongoose
 - JWT for authentication
@@ -128,39 +128,5 @@ Integration execution history per run
 
 UI styling with Tailwind / Material UI
 
-Deployment to Render (backend) and Vercel (frontend)
+Deployment to Render (backend) and Vercel (frontend).
 
-License
-
-
-That alone will make your repo look 3× more professional.
-
----
-
-## 2️⃣ Add this project to your resume (ATS-friendly)
-
-Under **Projects**:
-
-> **API Integration Platform — Node.js, Express, MongoDB, React**  
-> • Built a backend-heavy full-stack API integration platform where authenticated users can create, trigger, and monitor external API workflows (similar to Zapier-style automations).  
-> • Implemented secure JWT authentication, protected routes, and user-specific integration storage using Node.js, Express, and MongoDB.  
-> • Created an integration trigger engine using Axios that calls third-party APIs, logs responses, tracks `success/failed` status, and stores `lastTriggeredAt` + `lastResponse` for each integration.  
-> • Developed a React dashboard (Vite) with login, integration creation form, live integration table, and trigger/retry actions consuming the backend REST APIs.
-
-For a shorter CV version:
-
-> **API Integration Platform (Node.js, MongoDB, React)** – Built a JWT-secured full-stack app that lets users create API integrations, trigger external webhooks, and view real-time status and logs from a React dashboard.
-
----
-
-## 3️⃣ Next: what we can do
-
-Now that code is safely on GitHub, we can:
-
-1. **Polish UI** (Tailwind or simple CSS)  
-2. **Add Delete integration** (small but useful)  
-3. **Deploy backend + frontend** so you have a live link for applications  
-4. Craft a **LinkedIn post** announcing the project
-
-If you tell me what you want to do first (UI polish, delete, deploy, or resume/LinkedIn), I’ll walk you through it step by step.
-::contentReference[oaicite:0]{index=0}
